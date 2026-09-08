@@ -34,7 +34,7 @@ Site pessoal em página única (*single page*), feito em **HTML** e **CSS puro**
 - **Auxiliar e Web Design** — Total Produção, Cultura e Artes LTDA
 
 - **Monitora** — IFAC
-  Apoio educacional e de inclusão a um aluno, acompanhando atividades em sala de aula.
+  Apoio educacional e de inclusão a um aluno, acompanhando em atividades.
 
 - **Atendente** — Frutaria
   Atendimento geral: vendas, caixa e organização da loja.
