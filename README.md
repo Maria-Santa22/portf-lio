@@ -49,6 +49,6 @@ Site pessoal em página única (*single page*), feito em **HTML** e **CSS puro**
 <div align="center">
 
 ---
-Feito com 💙 por Maria Santa Pereira Nunes
+ 💙
 
 </div>
