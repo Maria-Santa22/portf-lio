@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maria Santa Pereira Nunes — Técnica em Informática para Internet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0F1B2D;
+    --surface: #142238;
+    --line: #24374F;
+    --text: #EAEFF5;
+    --text-dim: #8FA3BB;
+    --teal: #4FD1C5;
+    --amber: #F2B84B;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{
+    font-family:'Sora', sans-serif;
+    font-weight:700;
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit; text-decoration:none;}
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+  section{padding:96px 0;}
+  @media (max-width:640px){
+    section{padding:64px 0;}
+    .wrap{padding:0 22px;}
+  }
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky; top:0; z-index:20;
+    background:rgba(15,27,45,0.85);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{
+    display:flex; justify-content:space-between; align-items:center;
+    height:64px; max-width:760px;
+  }
+  .nav-name{font-family:'Sora',sans-serif; font-weight:600; font-size:1rem;}
+  .nav-links{display:flex; gap:24px; font-size:0.92rem; color:var(--text-dim);}
+  .nav-links a:hover{color:var(--teal);}
+  @media (max-width:560px){
+    .nav-links{gap:14px; font-size:0.82rem;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:120px 0 100px;
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-net{
+    position:absolute; inset:0; z-index:0; opacity:0.55;
+  }
+  .hero .wrap{position:relative; z-index:1;}
+  .kicker{
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--teal);
+    font-size:0.85rem;
+    margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:clamp(2.1rem, 5vw, 3.2rem);
+    line-height:1.12;
+    max-width:11ch;
+  }
+  .hero p.lead{
+    margin-top:22px;
+    max-width:46ch;
+    color:var(--text-dim);
+    font-size:1.05rem;
+  }
+  .hero-goal{
+    margin-top:36px;
+    display:inline-flex;
+    align-items:baseline;
+    gap:10px;
+    border-left:2px solid var(--amber);
+    padding-left:14px;
+  }
+  .hero-goal .g-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    color:var(--amber);
+  }
+  .hero-goal .g-text{color:var(--text); font-size:0.95rem;}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap:48px;
+  }
+  @media (max-width:640px){
+    .about-grid{grid-template-columns:1fr; gap:36px;}
+  }
+  .about h2{font-size:1.6rem; margin-bottom:20px;}
+  .about p{color:var(--text-dim); margin-bottom:14px;}
+  .traits{list-style:none; display:flex; flex-direction:column; gap:12px; margin-top:8px;}
+  .traits li{
+    font-size:0.95rem;
+    padding-left:16px;
+    position:relative;
+    color:var(--text);
+  }
+  .traits li::before{
+    content:"";
+    position:absolute; left:0; top:0.5em;
+    width:6px; height:6px;
+    background:var(--teal);
+    border-radius:50%;
+  }
+  .edu-block{
+    border:1px solid var(--line);
+    background:var(--surface);
+    border-radius:6px;
+    padding:22px;
+  }
+  .edu-block .school{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    color:var(--text-dim);
+    margin-bottom:6px;
+  }
+  .edu-block .course{font-weight:600; font-size:1rem; margin-bottom:4px;}
+  .edu-block .status{color:var(--amber); font-size:0.85rem;}
+  .edu-block .certs{
+    margin-top:16px; padding-top:16px;
+    border-top:1px solid var(--line);
+    color:var(--text-dim); font-size:0.9rem;
+  }
+
+  /* ---------- SKILLS ---------- */
+  .skills-row{
+    display:flex; flex-wrap:wrap; gap:12px;
+    margin-top:8px;
+  }
+  .skill-chip{
+    border:1px solid var(--line);
+    padding:8px 16px;
+    border-radius:999px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.85rem;
+    color:var(--text);
+    background:var(--surface);
+  }
+
+  /* ---------- EXPERIENCE ---------- */
+  .exp-list{margin-top:8px;}
+  .exp-item{
+    display:grid;
+    grid-template-columns: 170px 1fr;
+    gap:24px;
+    padding:24px 0;
+    border-top:1px solid var(--line);
+  }
+  .exp-item:last-child{border-bottom:1px solid var(--line);}
+  @media (max-width:600px){
+    .exp-item{grid-template-columns:1fr; gap:6px;}
+  }
+  .exp-role{font-family:'Sora', sans-serif; font-weight:600; font-size:1.05rem;}
+  .exp-org{
+    display:block; margin-top:6px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.75rem; color:var(--teal);
+  }
+  .exp-desc{color:var(--text-dim); font-size:0.94rem;}
+
+  /* ---------- CERTIFICATES ---------- */
+  .cert-list{margin-top:8px;}
+  .cert-item{
+    display:flex; justify-content:space-between; align-items:baseline;
+    gap:16px;
+    padding:14px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .cert-name{font-size:0.96rem; color:var(--text);}
+  .cert-meta{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.76rem;
+    color:var(--text-dim);
+    white-space:nowrap;
+    text-align:right;
+  }
+  @media (max-width:560px){
+    .cert-item{flex-direction:column; gap:4px;}
+    .cert-meta{text-align:left;}
+  }
+
+  /* ---------- PROJECTS ---------- */
+  .proj-list{
+    margin-top:8px;
+  }
+  .proj{
+    display:grid;
+    grid-template-columns: 170px 1fr;
+    gap:24px;
+    padding:28px 0;
+    border-top:1px solid var(--line);
+  }
+  .proj:last-child{border-bottom:1px solid var(--line);}
+  @media (max-width:600px){
+    .proj{grid-template-columns:1fr; gap:8px;}
+  }
+  .proj-name{
+    font-family:'Sora', sans-serif;
+    font-weight:600;
+    font-size:1.15rem;
+  }
+  .proj-tag{
+    display:block;
+    margin-top:8px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    color:var(--teal);
+  }
+  .proj-desc{color:var(--text-dim); font-size:0.96rem;}
+
+  /* ---------- CONTACT ---------- */
+  .contact h2{font-size:1.6rem; margin-bottom:12px;}
+  .contact p.lead{color:var(--text-dim); max-width:44ch; margin-bottom:32px;}
+  .contact-list{
+    display:flex; flex-direction:column; gap:0;
+    border-top:1px solid var(--line);
+  }
+  .contact-item{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:18px 0;
+    border-bottom:1px solid var(--line);
+    font-size:0.98rem;
+  }
+  .contact-item .c-label{
+    color:var(--text-dim);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.8rem;
+  }
+  .contact-item .c-value{font-weight:500;}
+  .contact-item a:hover{color:var(--teal);}
+
+  footer{
+    padding:32px 0;
+    text-align:center;
+    color:var(--text-dim);
+    font-size:0.82rem;
+    border-top:1px solid var(--line);
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="nav-name">Maria Santa</span>
+    <div class="nav-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#certificados">Certificados</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <svg class="hero-net" viewBox="0 0 760 420" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#24374F" stroke-width="1">
+      <line x1="60" y1="70" x2="240" y2="140"/>
+      <line x1="240" y1="140" x2="180" y2="260"/>
+      <line x1="240" y1="140" x2="420" y2="90"/>
+      <line x1="420" y1="90" x2="600" y2="170"/>
+      <line x1="420" y1="90" x2="470" y2="250"/>
+      <line x1="600" y1="170" x2="710" y2="110"/>
+      <line x1="600" y1="170" x2="650" y2="320"/>
+      <line x1="180" y1="260" x2="330" y2="330"/>
+      <line x1="330" y1="330" x2="470" y2="250"/>
+      <line x1="60" y1="70" x2="30" y2="220"/>
+    </g>
+    <g fill="#4FD1C5">
+      <circle cx="60" cy="70" r="4"/>
+      <circle cx="240" cy="140" r="5"/>
+      <circle cx="420" cy="90" r="4"/>
+      <circle cx="600" cy="170" r="5"/>
+      <circle cx="710" cy="110" r="3.5"/>
+      <circle cx="180" cy="260" r="4"/>
+      <circle cx="470" cy="250" r="4.5"/>
+      <circle cx="330" cy="330" r="3.5"/>
+      <circle cx="650" cy="320" r="4"/>
+      <circle cx="30" cy="220" r="3"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div class="kicker">técnica em informática para internet</div>
+    <h1>Maria Santa Pereira Nunes</h1>
+    <p class="lead">18 anos, estudante do Instituto Federal do Acre em Rio Branco (AC), pretendo seguir desenvolvendo sistemas para internet.</p>
+    <div class="hero-goal">
+      <span class="g-label">objetivo</span>
+      <span class="g-text">Atuar como analista de dados ou desenvolvedora web — de olho também em concurso público na área de TI</span>
+    </div>
+  </div>
+</header>
+
+<section id="sobre">
+  <div class="wrap about-grid">
+    <div class="about">
+      <h2>Sobre</h2>
+      <p>Estou concluindo o curso técnico em Informática para Internet no Instituto Federal do Acre (IFAC), reunindo certificados ao longo do caminho e projetos feitos em equipe.</p>
+      <p>Gosto de aprender coisas novas e de dividir o trabalho — a maior parte do que já construí nasceu de projetos em grupo, onde aprendi tanto quanto ensinei.</p>
+      <ul class="traits">
+        <li>Responsável com prazos e entregas</li>
+        <li>Trabalha bem em equipe</li>
+        <li>Sempre em busca de aprender algo novo</li>
+      </ul>
+    </div>
+    <div class="edu-block">
+      <div class="school">Instituto Federal do Acre — IFAC</div>
+      <div class="course">Técnico em Informática para Internet</div>
+      <div class="status">Em fase de conclusão</div>
+      <div class="certs">10 certificados concluídos em TI, segurança da informação e produtividade — veja abaixo.</div>
+    </div>
+  </div>
+</section>
+
+<section id="experiencia">
+  <div class="wrap">
+    <h2 style="font-size:1.6rem;">Experiência</h2>
+    <div class="exp-list">
+      <div class="exp-item">
+        <div>
+          <div class="exp-role">Monitora</div>
+          <span class="exp-org">IFAC</span>
+        </div>
+        <div class="exp-desc">Apoio educacional e de inclusão a um aluno, acompanhando atividades em sala de aula.</div>
+      </div>
+      <div class="exp-item">
+        <div>
+          <div class="exp-role">Atendente</div>
+          <span class="exp-org">Frutaria</span>
+        </div>
+        <div class="exp-desc">Atendimento geral — vendas, caixa e organização da loja.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="habilidades" style="border-top:1px solid var(--line); background:var(--surface);">
+  <div class="wrap">
+    <h2 style="font-size:1.6rem; margin-bottom:8px;">Habilidades</h2>
+    <p style="color:var(--text-dim); margin-bottom:8px;">Base em desenvolvimento web e dados.</p>
+    <div class="skills-row">
+      <span class="skill-chip">HTML</span>
+      <span class="skill-chip">CSS</span>
+      <span class="skill-chip">JavaScript</span>
+      <span class="skill-chip">PHP</span>
+      <span class="skill-chip">Python</span>
+      <span class="skill-chip">SQL</span>
+    </div>
+  </div>
+</section>
+
+<section id="certificados">
+  <div class="wrap">
+    <h2 style="font-size:1.6rem;">Certificados</h2>
+    <p style="color:var(--text-dim); margin-top:8px; margin-bottom:8px;">Cursos concluídos ao longo da formação técnica.</p>
+    <div class="cert-list">
+      <div class="cert-item">
+        <span class="cert-name">Fundamentos de TI: Hardware e Software</span>
+        <span class="cert-meta">Escola Virtual Bradesco · 7h</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">Formação em Cibersegurança — Nivelamento</span>
+        <span class="cert-meta">Hackers do Bem / SENAI · 80h</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">Formação em Cibersegurança — Básico</span>
+        <span class="cert-meta">Hackers do Bem / SENAI · 64h</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">Softwares de Segurança da Informação</span>
+        <span class="cert-meta">Instituto Federal do Rio Grande do Sul · 20h</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">Microsoft Excel 2016 — Básico</span>
+        <span class="cert-meta">Escola Virtual Bradesco · 15h</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">Microsoft Excel 2016 — Intermediário</span>
+        <span class="cert-meta">Escola Virtual Bradesco · 20h</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">Microsoft Excel 2016 — Avançado</span>
+        <span class="cert-meta">Escola Virtual Bradesco · 30h</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">Microsoft PowerPoint 2016 — Básico</span>
+        <span class="cert-meta">Escola Virtual Bradesco · 8h</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">Microsoft PowerPoint 2016 — Avançado</span>
+        <span class="cert-meta">Escola Virtual Bradesco · 8h</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">Coletivo Coca-Cola Jovem</span>
+        <span class="cert-meta">Instituto Coca-Cola Brasil · 11h</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projetos">
+  <div class="wrap">
+    <h2 style="font-size:1.6rem;">Projetos</h2>
+    <p style="color:var(--text-dim); margin-top:8px;">Todos desenvolvidos em equipe.</p>
+    <div class="proj-list">
+      <div class="proj">
+        <div>
+          <div class="proj-name">SGE</div>
+          <span class="proj-tag">projeto em equipe</span>
+        </div>
+        <div class="proj-desc">Sistema de gerenciamento de estoque — controle de entrada, saída e organização de produtos.</div>
+      </div>
+      <div class="proj">
+        <div>
+          <div class="proj-name">Luminous Gym</div>
+          <span class="proj-tag">projeto em equipe</span>
+        </div>
+        <div class="proj-desc">Sistema para uma academia voltada exclusivamente para mulheres, pensado para a gestão do espaço e das alunas.</div>
+      </div>
+      <div class="proj">
+        <div>
+          <div class="proj-name">The Trigono Million</div>
+          <span class="proj-tag">projeto em equipe</span>
+        </div>
+        <div class="proj-desc">Jogo desenvolvido como exercício prático de programação e lógica.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="contact" style="border-top:1px solid var(--line); background:var(--surface);">
+  <div class="wrap">
+    <h2>Contato</h2>
+    <p class="lead">Aberta a oportunidades na área de TI e sistemas de internet.</p>
+    <div class="contact-list">
+      <div class="contact-item">
+        <span class="c-label">e-mail</span>
+        <a class="c-value" href="mailto:mariams.santaa@gmail.com">mariams.santaa@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <span class="c-label">telefone</span>
+        <a class="c-value" href="tel:+5568992431023">(68) 99243-1023</a>
+      </div>
+      <div class="contact-item">
+        <span class="c-label">github</span>
+        <a class="c-value" href="https://github.com/Maria-Santa22" target="_blank" rel="noopener">github.com/Maria-Santa22</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Maria Santa Pereira Nunes — Técnica em Informática para Internet
+</footer>
+
+</body>
+</html>
