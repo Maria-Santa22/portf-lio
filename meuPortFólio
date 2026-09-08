@@ -345,6 +345,13 @@
     <div class="exp-list">
       <div class="exp-item">
         <div>
+          <div class="exp-role">Auxiliar e Web Design</div>
+          <span class="exp-org">Total Produção, Cultura e Artes LTDA</span>
+        </div>
+        <div class="exp-desc">Atuação como auxiliar e em web design.</div>
+      </div>
+      <div class="exp-item">
+        <div>
           <div class="exp-role">Monitora</div>
           <span class="exp-org">IFAC</span>
         </div>
@@ -372,6 +379,7 @@
       <span class="skill-chip">PHP</span>
       <span class="skill-chip">Python</span>
       <span class="skill-chip">SQL</span>
+      <span class="skill-chip">MySQL</span>
       <span class="skill-chip">Git</span>
       <span class="skill-chip">GitHub</span>
       <span class="skill-chip">Django</span>
@@ -466,10 +474,6 @@
       <div class="contact-item">
         <span class="c-label">e-mail</span>
         <a class="c-value" href="mailto:mariams.santaa@gmail.com">mariams.santaa@gmail.com</a>
-      </div>
-      <div class="contact-item">
-        <span class="c-label">telefone</span>
-        <a class="c-value" href="tel:+5568992431023">(68) 99243-1023</a>
       </div>
       <div class="contact-item">
         <span class="c-label">github</span>
