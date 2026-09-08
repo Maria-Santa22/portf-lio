@@ -16,7 +16,7 @@
 
 Site pessoal em página única (*single page*), feito em **HTML** e **CSS puro**, reunindo minha trajetória, experiência, certificados e projetos na área de tecnologia.
 
-18 anos, estudante do **Instituto Federal do Acre (IFAC)**, concluindo o técnico em Informática para Internet — em busca de oportunidades como **analista de dados** ou **desenvolvedora web**. 🚀
+18 anos, estudante do **Instituto Federal do Acre (IFAC)**, concluindo o técnico em Informática para Internet — em busca de oportunidades como **analista de dados**  🚀
 
 ## 🧭 Seções do site
 
@@ -27,7 +27,7 @@ Site pessoal em página única (*single page*), feito em **HTML** e **CSS puro**
 | 🛠️ Habilidades | HTML, CSS, JavaScript, PHP, Python, SQL, Git, GitHub, Django |
 | 🏆 Certificados | Cursos em TI, segurança da informação e produtividade |
 | 📁 Projetos | SGE, Luminous Gym e The Trigono Million — todos em equipe |
-| ✉️ Contato | E-mail, telefone e GitHub |
+| ✉️ Contato | E-mail e GitHub |
 
 ## 🧰 Tecnologias
 
@@ -37,27 +37,16 @@ Site pessoal em página única (*single page*), feito em **HTML** e **CSS puro**
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white)
 
-## 🚀 Como visualizar
 
-Basta abrir o arquivo `index.html` em qualquer navegador.
-
-### Publicando com GitHub Pages (gratuito)
-
-1. Suba este repositório no GitHub
-2. Vá em **Settings → Pages**
-3. Selecione a branch principal e a pasta raiz (`/`)
-4. Pronto! Seu site estará em:
-   `https://Maria-Santa22.github.io/nome-do-repositorio`
 
 ## 📬 Contato
 
 - 📧 **E-mail:** mariams.santaa@gmail.com
-- 📱 **Telefone:** (68) 99243-1023
 - 💻 **GitHub:** [github.com/Maria-Santa22](https://github.com/Maria-Santa22)
 
 <div align="center">
 
 ---
-Feito com 💙 por Maria Santa Pereira Nunes
+💙 
 
 </div>
