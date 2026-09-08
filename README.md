@@ -16,7 +16,7 @@
 
 Site pessoal em página única (*single page*), feito em **HTML** e **CSS puro**, reunindo minha trajetória, experiência, certificados e projetos na área de tecnologia.
 
-18 anos, estudante do **Instituto Federal do Acre (IFAC)**, concluindo o técnico em Informática para Internet — em busca de oportunidades como **analista de dados** 🚀
+18 anos, estudante do **Instituto Federal do Acre (IFAC)**, concluindo o técnico em Informática para Internet — em busca de oportunidades como **analista de dados** ou **desenvolvedora web**. 🚀
 
 ## 🧭 Seções do site
 
@@ -28,6 +28,16 @@ Site pessoal em página única (*single page*), feito em **HTML** e **CSS puro**
 | 🏆 Certificados | Cursos em TI, segurança da informação e produtividade |
 | 📁 Projetos | SGE, Luminous Gym e The Trigono Million — todos em equipe |
 | ✉️ Contato | E-mail e GitHub |
+
+## 💼 Experiência
+
+- **Auxiliar e Web Design** — Total Produção, Cultura e Artes LTDA
+
+- **Monitora** — IFAC
+  Apoio educacional e de inclusão a um aluno, acompanhando atividades em sala de aula.
+
+- **Atendente** — Frutaria
+  Atendimento geral: vendas, caixa e organização da loja.
 
 ## 🧰 Tecnologias
 
@@ -41,6 +51,7 @@ Site pessoal em página única (*single page*), feito em **HTML** e **CSS puro**
 ![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white)
 
 
+
 ## 📬 Contato
 
 - 📧 **E-mail:** mariams.santaa@gmail.com
@@ -49,6 +60,6 @@ Site pessoal em página única (*single page*), feito em **HTML** e **CSS puro**
 <div align="center">
 
 ---
- 💙
+Feito com 💙 por Maria Santa Pereira Nunes
 
 </div>
