@@ -16,7 +16,7 @@
 
 Site pessoal em página única (*single page*), feito em **HTML** e **CSS puro**, reunindo minha trajetória, experiência, certificados e projetos na área de tecnologia.
 
-18 anos, estudante do **Instituto Federal do Acre (IFAC)**, concluindo o técnico em Informática para Internet — em busca de oportunidades como **analista de dados** ou **desenvolvedora web**. 🚀
+18 anos, estudante do **Instituto Federal do Acre (IFAC)**, concluindo o técnico em Informática para Internet — em busca de oportunidades como **analista de dados**. 🚀
 
 ## 🧭 Seções do site
 
@@ -27,7 +27,7 @@ Site pessoal em página única (*single page*), feito em **HTML** e **CSS puro**
 | 🛠️ Habilidades | HTML, CSS, JavaScript, PHP, Python, SQL |
 | 🏆 Certificados | Cursos em TI, segurança da informação e produtividade |
 | 📁 Projetos | SGE, Luminous Gym e The Trigono Million — todos em equipe |
-| ✉️ Contato | E-mail, telefone e GitHub |
+| ✉️ Contato | E-mail e GitHub |
 
 
 ## 📬 Contato
@@ -38,6 +38,6 @@ Site pessoal em página única (*single page*), feito em **HTML** e **CSS puro**
 <div align="center">
 
 ---
-Feito com 💙 por Maria Santa Pereira Nunes
+💙 
 
 </div>
